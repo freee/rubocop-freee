@@ -229,6 +229,8 @@ Style/FileName:
   Description: 'Use snake_case for source file names.'
   StyleGuide: '#snake-case-files'
   Enabled: true
+  Exclude:
+    - 'vendor/**/*'
 
 Style/InitialIndentation:
   Description: >-

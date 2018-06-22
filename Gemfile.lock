@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     rubocop-freee (0.1.0)
+      rubocop (= 0.48.1)
+      rubocop-checkstyle_formatter
+      rubocop-rspec
 
 GEM
   remote: https://rubygems.org/
@@ -59,10 +62,7 @@ DEPENDENCIES
   pry-byebug
   rake (~> 10.0)
   rspec (~> 3.6)
-  rubocop (= 0.48.1)
-  rubocop-checkstyle_formatter
   rubocop-freee!
-  rubocop-rspec
   yard
 
 BUNDLED WITH

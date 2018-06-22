@@ -2,7 +2,7 @@
 
 # Load library
 $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
-require 'rubocop-freee'
+require 'rubocop_freee'
 require 'rubocop/rspec/support'
 require 'pry'
 

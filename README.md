@@ -42,7 +42,7 @@ Freee/ScopeReturnValue:
   Enabled: true
 ```
 
-### requires the new cop in `lib/rubocop-freee.rb` .
+### requires the new cop in `lib/rubocop_freee.rb` .
 
 ```ruby
 require 'rubocop/cop/freee/scope_return_value'

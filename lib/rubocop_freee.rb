@@ -4,7 +4,7 @@ require 'pathname'
 require 'yaml'
 
 require 'rubocop'
-require 'rubocop-freee'
+require 'rubocop_freee'
 require 'rubocop/freee/version'
 
 # custom cops
