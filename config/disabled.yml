@@ -1,0 +1,201 @@
+# These are all the cops that are disabled in the default configuration.
+
+#################### Style ################################
+
+Style/AsciiComments:
+  Description: 'Use only ascii symbols in comments.'
+  StyleGuide: '#english-comments'
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Description: 'Checks style of children classes and modules.'
+  Enabled: false
+
+# true: private, protected, publicより下の行はインデントを必ず下げる false: 下げなくてもよい
+Style/AccessModifierIndentation:
+  Description: 'Check indentation of private/protected visibility modifiers.'
+  StyleGuide: '#indent-public-private-protected'
+  Enabled: false
+
+# true: 複数行のブロックは'lambda'必須 false: '->'による省略記法を許可
+Style/Lambda:
+  Description: 'Use the new lambda literal syntax for single-line blocks.'
+  StyleGuide: '#lambda-multi-line'
+  Enabled: false
+
+# true: クラスの記述形式をチェックする（デフォルトではネスト形式かどうか） false: チェックしない
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# true: 英語コメントのみ許可 false: 日本語コメントも許可
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockComments:
+  Description: 'Do not use block comments.'
+  StyleGuide: '#no-block-comments'
+  Enabled: false
+
+Style/NumericPredicate:
+  Description: >-
+                 Checks for the use of predicate- or comparison methods for
+                 numeric comparisons.
+  StyleGuide: '#predicate-methods'
+  # This will change to a new method call which isn't guaranteed to be on the
+  # object. Switching these methods has to be done with knowledge of the types
+  # of the variables which rubocop doesn't have.
+  AutoCorrect: false
+  Enabled: false
+
+Style/DotPosition:
+  Description: 'Checks the position of the dot in multi-line method calls.'
+  StyleGuide: '#consistent-multi-line-chains'
+  Enabled: false
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Description: >-
+                 Checks indentation of binary operations that span more than
+                 one line.
+  Enabled: false
+
+Style/EvenOdd:
+  Description: 'Favor the use of Integer#even? && Integer#odd?'
+  StyleGuide: '#predicate-methods'
+  Enabled: false
+
+Style/FirstParameterIndentation:
+  Description: 'Checks the indentation of the first parameter in a method call.'
+  Enabled: false
+
+Style/IndentationConsistency:
+  Description: 'Keep indentation straight.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: false
+
+Style/MultilineArrayBraceLayout:
+  Description: >-
+                 Checks that the closing brace in an array literal is
+                 either on the same line as the last array element, or
+                 a new line.
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Description: 'Avoid multi-line chains of blocks.'
+  StyleGuide: '#single-line-blocks'
+  Enabled: false
+
+Style/MutableConstant:
+  Description: 'Do not assign mutable objects to constants.'
+  Enabled: false
+
+# Autocorrect効くのでひとまずfalseにしておく（要相談）
+Style/NumericLiterals:
+  Description: >-
+                  Add underscores to large numeric literals to improve their
+                  readability.
+  StyleGuide: '#underscores-in-numerics'
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  Description: 'Use smallcase prefixes for numeric literals.'
+  StyleGuide: '#numeric-literal-prefixes'
+  Enabled: false
+
+Style/NumericPredicate:
+  Description: >-
+                  Checks for the use of predicate- or comparison methods for
+                  numeric comparisons.
+  StyleGuide: '#predicate-methods'
+  Enabled: false
+
+Style/ParallelAssignment:
+  Description: >-
+                  Check for simple usages of parallel assignment.
+                  It will only warn when the number of variables
+                  matches on both sides of the assignment.
+  StyleGuide: '#parallel-assignment'
+  Enabled: false
+
+Style/RescueModifier:
+  Description: 'Avoid using rescue in its modifier form.'
+  StyleGuide: '#no-rescue-modifiers'
+  Enabled: false
+
+Style/VariableNumber:
+  Description: 'Use the configured style when numbering variables.'
+  Enabled: false
+
+Style/GlobalVars:
+  Description: 'Do not introduce global variables.'
+  StyleGuide: '#instance-vars'
+  Reference: 'http://www.zenspider.com/Languages/Ruby/QuickRef.html'
+  Enabled: false
+
+Style/RaiseArgs:
+  Description: 'Checks the arguments passed to raise/fail.'
+  StyleGuide: '#exception-class-messages'
+  Enabled: false
+
+##################### Lint ################################
+
+Lint/NonLocalExitFromIterator:
+  Description: 'Do not use return in iterator to cause non-local exit.'
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Description: 'Checks for ambiguous block association with method when param passed without parentheses.'
+  StyleGuide: '#syntax'
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Description: "Don't use assignment in conditions."
+  StyleGuide: '#safe-assignment-in-condition'
+  Enabled: false
+
+Lint/UnneededDisable:
+  Description: >-
+                 Checks for rubocop:disable comments that can be removed.
+                 Note: this cop is not disabled when disabling all cops.
+                 It must be explicitly disabled.
+  Enabled: false
+
+# TODO custom cop作成が必要
+Lint/EndAlignment:
+  Description: 'Align ends correctly.'
+  Enabled: false
+
+#################### Metrics ##############################
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Enabled: false
+
+Metrics/ModuleLength:
+  Description: 'Avoid modules longer than 100 lines of code.'
+  Enabled: false
+
+#################### Security #############################
+
+Security/Eval:
+  Description: 'The use of eval represents a serious security risk.'
+  Enabled: false
+
+#################### Bundler ##############################
+
+Bundler/DuplicatedGem:
+  Description: 'Checks for duplicate gem entries in Gemfile.'
+  Enabled: false
+  Include:
+    - '**/Gemfile'
+    - '**/gems.rb'
+
+Bundler/OrderedGems:
+  Description: 'Gems within groups in the Gemfile should be alphabetically sorted.'
+  Enabled: false
+  Include:
+    - '**/Gemfile'
+    - '**/gems.rb'

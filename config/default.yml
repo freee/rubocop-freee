@@ -1,0 +1,11 @@
+# NOTE: rails.yml は repository毎に設定する
+inherit_from:
+  - exclude.yml
+  - enabled.yml
+  - disabled.yml
+  - rspec.yml
+
+# Common configuration.
+AllCops:
+  TargetRubyVersion: 2.3
+  DefaultFormatter: progress
