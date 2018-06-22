@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.metadata['allowed_push_host' ] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.require_paths = ['lib']
-  spec.files         = `git ls-files -z`.split("\x0").reject {|f| f.match?(%r[^(test|spec|features)/]) }
+  spec.files         = `git ls-files -z`.split("\x0").reject {|f| f =~ (%r[^(test|spec|features)/]) }
   spec.licenses      = ['MIT']
 
   spec.add_development_dependency 'rubocop', '~> 0.48'
