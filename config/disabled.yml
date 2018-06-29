@@ -12,7 +12,7 @@ Style/ClassAndModuleChildren:
   Enabled: false
 
 # true: private, protected, publicより下の行はインデントを必ず下げる false: 下げなくてもよい
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   Description: 'Check indentation of private/protected visibility modifiers.'
   StyleGuide: '#indent-public-private-protected'
   Enabled: false
@@ -47,7 +47,7 @@ Style/NumericPredicate:
   AutoCorrect: false
   Enabled: false
 
-Style/DotPosition:
+Layout/DotPosition:
   Description: 'Checks the position of the dot in multi-line method calls.'
   StyleGuide: '#consistent-multi-line-chains'
   Enabled: false
@@ -56,7 +56,7 @@ Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
   Enabled: false
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Description: >-
                  Checks indentation of binary operations that span more than
                  one line.
@@ -67,16 +67,16 @@ Style/EvenOdd:
   StyleGuide: '#predicate-methods'
   Enabled: false
 
-Style/FirstParameterIndentation:
+Layout/FirstParameterIndentation:
   Description: 'Checks the indentation of the first parameter in a method call.'
   Enabled: false
 
-Style/IndentationConsistency:
+Layout/IndentationConsistency:
   Description: 'Keep indentation straight.'
   StyleGuide: '#spaces-indentation'
   Enabled: false
 
-Style/MultilineArrayBraceLayout:
+Layout/MultilineArrayBraceLayout:
   Description: >-
                  Checks that the closing brace in an array literal is
                  either on the same line as the last array element, or
@@ -125,7 +125,7 @@ Style/RescueModifier:
   StyleGuide: '#no-rescue-modifiers'
   Enabled: false
 
-Style/VariableNumber:
+Naming/VariableNumber:
   Description: 'Use the configured style when numbering variables.'
   Enabled: false
 
@@ -156,7 +156,7 @@ Lint/AssignmentInCondition:
   StyleGuide: '#safe-assignment-in-condition'
   Enabled: false
 
-Lint/UnneededDisable:
+Lint/UnneededCopDisableDirective:
   Description: >-
                  Checks for rubocop:disable comments that can be removed.
                  Note: this cop is not disabled when disabling all cops.
@@ -164,7 +164,7 @@ Lint/UnneededDisable:
   Enabled: false
 
 # TODO custom cop作成が必要
-Lint/EndAlignment:
+Layout/EndAlignment:
   Description: 'Align ends correctly.'
   Enabled: false
 

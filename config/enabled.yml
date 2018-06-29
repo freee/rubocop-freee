@@ -8,20 +8,20 @@ Style/Alias:
   EnforcedStyle: prefer_alias_method
   Enabled: true
 
-Style/AlignArray:
+Layout/AlignArray:
   Description: >-
                  Align the elements of an array literal if they span more than
                  one line.
   StyleGuide: '#align-multiline-arrays'
   Enabled: true
 
-Style/AlignHash:
+Layout/AlignHash:
   Description: >-
                  Align the elements of a hash literal if they span more than
                  one line.
   Enabled: true
 
-Style/AlignParameters:
+Layout/AlignParameters:
   Description: >-
                  Align the parameters of a method call if they span more
                  than one line.
@@ -47,7 +47,7 @@ Style/ArrayJoin:
   StyleGuide: '#array-join'
   Enabled: true
 
-Style/AsciiIdentifiers:
+Naming/AsciiIdentifiers:
   Description: 'Use only ascii symbols in identifiers.'
   StyleGuide: '#english-identifiers'
   Enabled: true
@@ -57,7 +57,7 @@ Style/Attr:
   StyleGuide: '#attr'
   Enabled: true
 
-Style/BlockEndNewline:
+Layout/BlockEndNewline:
   Description: 'Put end statement of multiline block on its own line.'
   Enabled: true
 
@@ -66,7 +66,7 @@ Style/CaseEquality:
   StyleGuide: '#no-case-equality'
   Enabled: true
 
-Style/CaseIndentation:
+Layout/CaseIndentation:
   Description: 'Indentation of when in a case/when/[else/]end.'
   StyleGuide: '#indent-when-to-case'
   IndentOneStep: false
@@ -77,7 +77,7 @@ Style/CharacterLiteral:
   StyleGuide: '#no-character-literals'
   Enabled: true
 
-Style/ClassAndModuleCamelCase:
+Naming/ClassAndModuleCamelCase:
   Description: 'Use CamelCase for classes and modules.'
   StyleGuide: '#camelcase-classes'
   Enabled: true
@@ -96,7 +96,7 @@ Style/ClassVars:
   StyleGuide: '#no-class-vars'
   Enabled: true
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Description: 'Checks the indentation of hanging closing parentheses.'
   Enabled: true
 
@@ -117,7 +117,7 @@ Style/CommentAnnotation:
   StyleGuide: '#annotate-keywords'
   Enabled: true
 
-Style/CommentIndentation:
+Layout/CommentIndentation:
   Description: 'Indentation of comments.'
   Enabled: true
 
@@ -128,7 +128,7 @@ Style/ConditionalAssignment:
                  of assigning that variable inside of each branch.
   Enabled: true
 
-Style/ConstantName:
+Naming/ConstantName:
   Description: 'Constants should use SCREAMING_SNAKE_CASE.'
   StyleGuide: '#screaming-snake-case'
   Enabled: true
@@ -148,7 +148,7 @@ Style/EachWithObject:
   Description: 'Prefer `each_with_object` over `inject` or `reduce`.'
   Enabled: true
 
-Style/ElseAlignment:
+Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
   Enabled: true
 
@@ -166,37 +166,37 @@ Style/DefWithParentheses:
   StyleGuide: '#method-parens'
   Enabled: true
 
-Style/EmptyLinesAroundAccessModifier:
+Layout/EmptyLinesAroundAccessModifier:
   Description: "Keep blank lines around access modifiers."
   StyleGuide: '#empty-lines-around-access-modifier'
   Enabled: true
 
-Style/EmptyLinesAroundBeginBody:
+Layout/EmptyLinesAroundBeginBody:
   Description: "Keeps track of empty lines around begin-end bodies."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Description: "Keeps track of empty lines around block bodies."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Description: "Keeps track of empty lines around class bodies."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Style/EmptyLinesAroundExceptionHandlingKeywords:
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
   Description: "Keeps track of empty lines around exception handling keywords."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Description: "Keeps track of empty lines around module bodies."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
 
-Style/EmptyLinesAroundMethodBody:
+Layout/EmptyLinesAroundMethodBody:
   Description: "Keeps track of empty lines around method bodies."
   StyleGuide: '#empty-lines-around-bodies'
   Enabled: true
@@ -216,23 +216,23 @@ Style/EndBlock:
   StyleGuide: '#no-END-blocks'
   Enabled: true
 
-Style/EndOfLine:
+Layout/EndOfLine:
   Description: 'Use Unix-style line endings.'
   StyleGuide: '#crlf'
   Enabled: true
 
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Description: 'Do not use unnecessary spacing.'
   Enabled: true
 
-Style/FileName:
+Naming/FileName:
   Description: 'Use snake_case for source file names.'
   StyleGuide: '#snake-case-files'
   Enabled: true
   Exclude:
     - 'vendor/**/*'
 
-Style/InitialIndentation:
+Layout/InitialIndentation:
   Description: >-
     Checks the indentation of the first non-blank non-comment line in a file.
   Enabled: true
@@ -284,7 +284,7 @@ Style/IfWithSemicolon:
   StyleGuide: '#no-semicolon-ifs'
   Enabled: true
 
-Style/IndentationWidth:
+Layout/IndentationWidth:
   Description: 'Use 2 spaces for indentation.'
   StyleGuide: '#spaces-indentation'
   Enabled: true
@@ -296,23 +296,23 @@ Style/IdenticalConditionalBranches:
                  out of the conditional.
   Enabled: true
 
-Style/IndentArray:
+Layout/IndentArray:
   Description: >-
                  Checks the indentation of the first element in an array
                  literal.
   Enabled: true
 
-Style/IndentAssignment:
+Layout/IndentAssignment:
   Description: >-
                  Checks the indentation of the first line of the
                  right-hand-side of a multi-line assignment.
   Enabled: true
 
-Style/IndentHash:
+Layout/IndentHash:
   Description: 'Checks the indentation of the first key in a hash literal.'
   Enabled: true
 
-Style/IndentHeredoc:
+Layout/IndentHeredoc:
   Description: 'This cops checks the indentation of the here document bodies.'
   StyleGuide: '#squiggly-heredocs'
   Enabled: true
@@ -328,7 +328,7 @@ Style/InverseMethods:
                  if an inverse method is defined.
   Enabled: true
 
-Style/SpaceInLambdaLiteral:
+Layout/SpaceInLambdaLiteral:
   Description: 'Checks for spaces in lambda literals.'
   EnforcedStyle: require_no_space
   Enabled: true
@@ -356,7 +356,7 @@ Style/MethodDefParentheses:
   StyleGuide: '#method-parens'
   Enabled: true
 
-Style/MethodName:
+Naming/MethodName:
   Description: 'Use the configured style when naming methods.'
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
@@ -377,11 +377,11 @@ Style/ModuleFunction:
   StyleGuide: '#module-function'
   Enabled: true
 
-Style/MultilineBlockLayout:
+Layout/MultilineBlockLayout:
   Description: 'Ensures newlines after multiline block do statements.'
   Enabled: true
 
-Style/MultilineHashBraceLayout:
+Layout/MultilineHashBraceLayout:
   Description: >-
                  Checks that the closing brace in a hash literal is
                  either on the same line as the last hash element, or
@@ -431,69 +431,69 @@ Style/BarePercentLiterals:
   Enabled: true
 
 # true: case-when文のインデントで、whenをcaseに合わせてインデントする（代入時等） false: チェックしない
-Style/CaseIndentation:
+Layout/CaseIndentation:
   Description: 'Indentation of when in a case/when/[else/]end.'
   StyleGuide: '#indent-when-to-case'
   Enabled: true
 
 # true: 2つ以上のメソッド定義の間には空行をいれる false: 空行不要
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   Description: 'Use empty lines between defs.'
   StyleGuide: '#empty-lines-between-methods'
   Enabled: true
 
 # true: 2行以上空行を空けない false: 2行以上の空行を許可
-Style/EmptyLines:
+Layout/EmptyLines:
   Description: "Don't use several empty lines in a row."
   StyleGuide: '#two-or-more-empty-lines'
   Enabled: true
 
 # true: コメント本文の前（'#'のあと）にはスペース必須 false: スペース不要
-Style/LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Description: 'Comments should start with a space.'
   StyleGuide: '#hash-space'
   Enabled: true
 
 # true: コロンのあとにスペース必須 false: スペース不要
-Style/SpaceAfterColon:
+Layout/SpaceAfterColon:
   Description: 'Use spaces after colons.'
   StyleGuide: '#spaces-operators'
   Enabled: true
 
 # true: セミコロンのあとにスペース必須 false: スペース不要
-Style/SpaceAfterSemicolon:
+Layout/SpaceAfterSemicolon:
   Description: 'Use spaces after semicolons.'
   StyleGuide: '#spaces-operators'
   Enabled: true
 
 # true: カンマのあとはスペース必須 false: スペース不要
-Style/SpaceAfterComma:
+Layout/SpaceAfterComma:
   Description: 'Use spaces after commas.'
   StyleGuide: '#spaces-operators'
   Enabled: true
 
 # true: '!'のあとにスペース不可 false: スペース許可
-Style/SpaceAfterNot:
+Layout/SpaceAfterNot:
   Description: Tracks redundant space after the ! operator.
   StyleGuide: '#no-space-bang'
   Enabled: true
 
 # true: ブロック呼び出し時のメソッド（eachとか）のあとにスペース必須 false: スペース不要
-Style/SpaceBeforeBlockBraces:
+Layout/SpaceBeforeBlockBraces:
   Description: >-
                  Checks that the left block brace has or doesn't have space
                  before it.
   Enabled: true
 
 # true: 行末コメントの前（'#'の前）にはスペース必須 false: スペース不要
-Style/SpaceBeforeComment:
+Layout/SpaceBeforeComment:
   Description: >-
                  Checks for missing space between code and a comment on the
                  same line.
   Enabled: true
 
 # true: ブロックの終了にスペース必須 false: スペース不要
-Style/SpaceInsideBlockBraces:
+Layout/SpaceInsideBlockBraces:
   Description: >-
                  Checks that block braces have or don't have surrounding space.
                  For blocks taking parameters, checks that the left brace has
@@ -502,30 +502,30 @@ Style/SpaceInsideBlockBraces:
   Enabled: true
 
 # true: 角括弧の中にカンマのあと以外のスペースは書かない false: その他のスペースも許可
-Style/SpaceInsideBrackets:
+Layout/SpaceInsideBrackets:
   Description: 'No spaces after [ or before ].'
   StyleGuide: '#no-spaces-braces'
   Enabled: true
 
 # true: ハッシュの開始、終了にスペース必須 false: スペース不要
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Description: "Use spaces inside hash literal braces - or don't."
   StyleGuide: '#spaces-operators'
   Enabled: true
 
 # true ファイル末尾に空行を必須とする false: ファイル末尾空行不要
-Style/TrailingBlankLines:
+Layout/TrailingBlankLines:
   Description: 'Checks trailing blank lines and final newline.'
   StyleGuide: '#newline-eof'
   Enabled: true
 
 # true: 変数名はsnake_caseとする false: チェックしない
-Style/VariableName:
+Naming/VariableName:
   Description: 'Use the configured style when naming variables.'
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
 
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Description: 'Check the naming of accessor methods for get_/set_.'
   StyleGuide: '#accessor_mutator_method_names'
   Enabled: true
@@ -566,7 +566,7 @@ Style/RegexpLiteral:
   StyleGuide: '#percent-r'
   Enabled: true
 
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Description: >-
                   Checks that the closing brace in a method call is
                   either on the same line as the last method argument, or
@@ -579,14 +579,14 @@ Style/MultilineMemoization:
   EnforcedStyle: braces
   Enabled: false
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   Description: >-
                   Checks indentation of method calls with the dot operator
                   that span more than one line.
   EnforcedStyle: aligned
   Enabled: true
 
-Style/MultilineMethodDefinitionBraceLayout:
+Layout/MultilineMethodDefinitionBraceLayout:
   Description: >-
                   Checks that the closing brace in a method definition is
                   either on the same line as the last method parameter, or
@@ -629,7 +629,7 @@ Style/NestedTernaryOperator:
   StyleGuide: '#no-nested-ternary'
   Enabled: true
 
-Style/EmptyLineAfterMagicComment:
+Layout/EmptyLineAfterMagicComment:
   Description: 'Add an empty line after magic comments to separate them from code.'
   StyleGuide: '#separate-magic-comments-from-code'
   Enabled: true
@@ -661,7 +661,7 @@ Style/OneLineConditional:
   StyleGuide: '#ternary-operator'
   Enabled: true
 
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Description: 'When defining binary operators, name the argument other.'
   StyleGuide: '#other-arg'
   Enabled: true
@@ -690,7 +690,7 @@ Style/PercentQLiterals:
   Description: 'Checks if uses of %Q/%q match the configured preference.'
   Enabled: true
 
-Style/PredicateName:
+Naming/PredicateName:
   Description: 'Check the names of predicate methods.'
   StyleGuide: '#bool-methods-qmark'
   Enabled: true
@@ -728,7 +728,7 @@ Style/RedundantReturn:
   StyleGuide: '#no-explicit-return'
   Enabled: true
 
-Style/RescueEnsureAlignment:
+Layout/RescueEnsureAlignment:
   Description: 'Align rescues and ensures correctly.'
   Enabled: true
 
@@ -761,32 +761,32 @@ Style/SingleLineMethods:
   StyleGuide: '#no-single-line-methods'
   Enabled: true
 
-Style/SpaceBeforeFirstArg:
+Layout/SpaceBeforeFirstArg:
   Description: >-
                  Checks that exactly one space is used between a method name
                  and the first argument for method calls without parentheses.
   Enabled: true
 
-Style/SpaceAfterMethodName:
+Layout/SpaceAfterMethodName:
   Description: >-
                  Do not put a space between a method name and the opening
                  parenthesis in a method definition.
   StyleGuide: '#parens-no-spaces'
   Enabled: true
 
-Style/SpaceBeforeComma:
+Layout/SpaceBeforeComma:
   Description: 'No spaces before commas.'
   Enabled: true
 
-Style/SpaceBeforeSemicolon:
+Layout/SpaceBeforeSemicolon:
   Description: 'No spaces before semicolons.'
   Enabled: true
 
-Style/SpaceAroundBlockParameters:
+Layout/SpaceAroundBlockParameters:
   Description: 'Checks the spacing inside and after block parameters pipes.'
   Enabled: true
 
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   Description: >-
                  Checks that the equals signs in parameter default assignments
                  have or don't have surrounding space depending on
@@ -794,34 +794,34 @@ Style/SpaceAroundEqualsInParameterDefault:
   StyleGuide: '#spaces-around-equals'
   Enabled: true
 
-Style/SpaceAroundKeyword:
+Layout/SpaceAroundKeyword:
   Description: 'Use a space around keywords if appropriate.'
   Enabled: true
 
-Style/SpaceAroundOperators:
+Layout/SpaceAroundOperators:
   Description: 'Use a single space around operators.'
   StyleGuide: '#spaces-operators'
   Enabled: true
 
-Style/SpaceInsideArrayPercentLiteral:
+Layout/SpaceInsideArrayPercentLiteral:
   Description: 'No unnecessary additional spaces between elements in %i/%w literals.'
   Enabled: true
 
-Style/SpaceInsidePercentLiteralDelimiters:
+Layout/SpaceInsidePercentLiteralDelimiters:
   Description: 'No unnecessary spaces inside delimiters of %i/%w/%x literals.'
   Enabled: true
 
-Style/SpaceInsideParens:
+Layout/SpaceInsideParens:
   Description: 'No spaces after ( or before ).'
   StyleGuide: '#no-spaces-braces'
   Enabled: true
 
-Style/SpaceInsideRangeLiteral:
+Layout/SpaceInsideRangeLiteral:
   Description: 'No spaces inside range literals.'
   StyleGuide: '#no-space-inside-range-literals'
   Enabled: true
 
-Style/SpaceInsideStringInterpolation:
+Layout/SpaceInsideStringInterpolation:
   Description: 'Checks for padding/surrounding spaces inside string interpolation.'
   StyleGuide: '#string-interpolation'
   Enabled: true
@@ -856,7 +856,7 @@ Style/SymbolLiteral:
   Description: 'Use plain symbols instead of string symbols when possible.'
   Enabled: true
 
-Style/Tab:
+Layout/Tab:
   Description: 'No hard tabs.'
   StyleGuide: '#spaces-indentation'
   Enabled: true
@@ -865,7 +865,7 @@ Style/TernaryParentheses:
   Description: 'Checks for use of parentheses around ternary conditions.'
   Enabled: true
 
-Style/TrailingWhitespace:
+Layout/TrailingWhitespace:
   Description: 'Avoid trailing whitespace.'
   StyleGuide: '#no-trailing-whitespace'
   Enabled: true
@@ -928,7 +928,7 @@ Style/ZeroLengthPredicate:
   Description: 'Use #empty? when testing for objects of length 0.'
   Enabled: true
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Description: >-
                   Checks indentation of binary operations that span more than
                   one line.
@@ -1050,7 +1050,7 @@ Lint/AmbiguousRegexpLiteral:
   Description: 'Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.'
   Enabled: true
 
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Description: 'Align block ends correctly.'
   Enabled: true
 
@@ -1080,7 +1080,7 @@ Lint/LiteralInInterpolation:
   Description: 'Checks for literals used in interpolation.'
   Enabled: true
 
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Description: 'Checks of literals used in conditions.'
   Enabled: true
 
@@ -1166,11 +1166,11 @@ Lint/DeprecatedClassMethods:
   Description: 'Check for deprecated class method calls.'
   Enabled: true
 
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Description: >-
                  Checks for condition placed in a confusing position relative to
                  the keyword.
