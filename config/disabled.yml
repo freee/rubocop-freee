@@ -1,5 +1,51 @@
 # These are all the cops that are disabled in the default configuration.
 
+#################### Layout ###############################
+
+# true: private, protected, publicより下の行はインデントを必ず下げる false: 下げなくてもよい
+Layout/AccessModifierIndentation:
+  Description: 'Check indentation of private/protected visibility modifiers.'
+  StyleGuide: '#indent-public-private-protected'
+  Enabled: false
+
+Layout/DotPosition:
+  Description: 'Checks the position of the dot in multi-line method calls.'
+  StyleGuide: '#consistent-multi-line-chains'
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Description: >-
+                 Checks indentation of binary operations that span more than
+                 one line.
+  Enabled: false
+
+Layout/FirstParameterIndentation:
+  Description: 'Checks the indentation of the first parameter in a method call.'
+  Enabled: false
+
+Layout/IndentationConsistency:
+  Description: 'Keep indentation straight.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: false
+
+Layout/MultilineArrayBraceLayout:
+  Description: >-
+                 Checks that the closing brace in an array literal is
+                 either on the same line as the last array element, or
+                 a new line.
+  Enabled: false
+
+# TODO custom cop作成が必要
+Layout/EndAlignment:
+  Description: 'Align ends correctly.'
+  Enabled: false
+
+#################### Naming ###############################
+
+Naming/VariableNumber:
+  Description: 'Use the configured style when numbering variables.'
+  Enabled: false
+
 #################### Style ################################
 
 Style/AsciiComments:
@@ -9,12 +55,6 @@ Style/AsciiComments:
 
 Style/ClassAndModuleChildren:
   Description: 'Checks style of children classes and modules.'
-  Enabled: false
-
-# true: private, protected, publicより下の行はインデントを必ず下げる false: 下げなくてもよい
-Layout/AccessModifierIndentation:
-  Description: 'Check indentation of private/protected visibility modifiers.'
-  StyleGuide: '#indent-public-private-protected'
   Enabled: false
 
 # true: 複数行のブロックは'lambda'必須 false: '->'による省略記法を許可
@@ -47,40 +87,13 @@ Style/NumericPredicate:
   AutoCorrect: false
   Enabled: false
 
-Layout/DotPosition:
-  Description: 'Checks the position of the dot in multi-line method calls.'
-  StyleGuide: '#consistent-multi-line-chains'
-  Enabled: false
-
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
-  Enabled: false
-
-Layout/MultilineOperationIndentation:
-  Description: >-
-                 Checks indentation of binary operations that span more than
-                 one line.
   Enabled: false
 
 Style/EvenOdd:
   Description: 'Favor the use of Integer#even? && Integer#odd?'
   StyleGuide: '#predicate-methods'
-  Enabled: false
-
-Layout/FirstParameterIndentation:
-  Description: 'Checks the indentation of the first parameter in a method call.'
-  Enabled: false
-
-Layout/IndentationConsistency:
-  Description: 'Keep indentation straight.'
-  StyleGuide: '#spaces-indentation'
-  Enabled: false
-
-Layout/MultilineArrayBraceLayout:
-  Description: >-
-                 Checks that the closing brace in an array literal is
-                 either on the same line as the last array element, or
-                 a new line.
   Enabled: false
 
 Style/MultilineBlockChain:
@@ -125,10 +138,6 @@ Style/RescueModifier:
   StyleGuide: '#no-rescue-modifiers'
   Enabled: false
 
-Naming/VariableNumber:
-  Description: 'Use the configured style when numbering variables.'
-  Enabled: false
-
 Style/GlobalVars:
   Description: 'Do not introduce global variables.'
   StyleGuide: '#instance-vars'
@@ -163,11 +172,6 @@ Lint/UnneededCopDisableDirective:
                  It must be explicitly disabled.
   Enabled: false
 
-# TODO custom cop作成が必要
-Layout/EndAlignment:
-  Description: 'Align ends correctly.'
-  Enabled: false
-
 #################### Metrics ##############################
 
 Metrics/ClassLength:
@@ -185,13 +189,6 @@ Security/Eval:
   Enabled: false
 
 #################### Bundler ##############################
-
-Bundler/DuplicatedGem:
-  Description: 'Checks for duplicate gem entries in Gemfile.'
-  Enabled: false
-  Include:
-    - '**/Gemfile'
-    - '**/gems.rb'
 
 Bundler/OrderedGems:
   Description: 'Gems within groups in the Gemfile should be alphabetically sorted.'

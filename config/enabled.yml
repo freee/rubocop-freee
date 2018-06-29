@@ -1,12 +1,6 @@
 # These are all the cops that are enabled in the default configuration.
 
-#################### Style ################################
-
-Style/Alias:
-  Description: 'Use alias instead of alias_method.'
-  StyleGuide: '#alias-method'
-  EnforcedStyle: prefer_alias_method
-  Enabled: true
+#################### Layout ###############################
 
 Layout/AlignArray:
   Description: >-
@@ -28,42 +22,8 @@ Layout/AlignParameters:
   StyleGuide: '#no-double-indent'
   Enabled: true
 
-Style/BracesAroundHashParameters:
-  Description: 'Enforce braces style around hash parameters.'
-  EnforcedStyle: no_braces
-  Enabled: true
-
-Style/BlockDelimiters:
-  Description: >-
-                Avoid using {...} for multi-line blocks (multiline chaining is
-                always ugly).
-                Prefer {...} over do...end for single-line blocks.
-  StyleGuide: '#single-line-blocks'
-  EnforcedStyle: braces_for_chaining
-  Enabled: true
-
-Style/ArrayJoin:
-  Description: 'Use Array#join instead of Array#*.'
-  StyleGuide: '#array-join'
-  Enabled: true
-
-Naming/AsciiIdentifiers:
-  Description: 'Use only ascii symbols in identifiers.'
-  StyleGuide: '#english-identifiers'
-  Enabled: true
-
-Style/Attr:
-  Description: 'Checks for uses of Module#attr.'
-  StyleGuide: '#attr'
-  Enabled: true
-
 Layout/BlockEndNewline:
   Description: 'Put end statement of multiline block on its own line.'
-  Enabled: true
-
-Style/CaseEquality:
-  Description: 'Avoid explicit use of the case equality operator(===).'
-  StyleGuide: '#no-case-equality'
   Enabled: true
 
 Layout/CaseIndentation:
@@ -72,98 +32,16 @@ Layout/CaseIndentation:
   IndentOneStep: false
   Enabled: true
 
-Style/CharacterLiteral:
-  Description: 'Checks for uses of character literals.'
-  StyleGuide: '#no-character-literals'
-  Enabled: true
-
-Naming/ClassAndModuleCamelCase:
-  Description: 'Use CamelCase for classes and modules.'
-  StyleGuide: '#camelcase-classes'
-  Enabled: true
-
-Style/ClassCheck:
-  Description: 'Enforces consistent use of `Object#is_a?` or `Object#kind_of?`.'
-  Enabled: true
-
-Style/ClassMethods:
-  Description: 'Use self when defining module/class methods.'
-  StyleGuide: '#def-self-class-methods'
-  Enabled: true
-
-Style/ClassVars:
-  Description: 'Avoid the use of class variables.'
-  StyleGuide: '#no-class-vars'
-  Enabled: true
-
 Layout/ClosingParenthesisIndentation:
   Description: 'Checks the indentation of hanging closing parentheses.'
-  Enabled: true
-
-Style/ColonMethodCall:
-  Description: 'Do not use :: for method call.'
-  StyleGuide: '#double-colons'
-  Enabled: true
-
-Style/CommandLiteral:
-  Description: 'Use `` or %x around command literals.'
-  StyleGuide: '#percent-x'
-  Enabled: true
-
-Style/CommentAnnotation:
-  Description: >-
-                 Checks formatting of special comments
-                 (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
-  StyleGuide: '#annotate-keywords'
   Enabled: true
 
 Layout/CommentIndentation:
   Description: 'Indentation of comments.'
   Enabled: true
 
-Style/ConditionalAssignment:
-  Description: >-
-                 Use the return value of `if` and `case` statements for
-                 assignment to a variable and variable comparison instead
-                 of assigning that variable inside of each branch.
-  Enabled: true
-
-Naming/ConstantName:
-  Description: 'Constants should use SCREAMING_SNAKE_CASE.'
-  StyleGuide: '#screaming-snake-case'
-  Enabled: true
-
-Style/DoubleNegation:
-  Description: 'Checks for uses of double negation (!!).'
-  StyleGuide: '#no-bang-bang'
-  Enabled: true
-
-Style/EachForSimpleLoop:
-  Description: >-
-                 Use `Integer#times` for a simple loop which iterates a fixed
-                 number of times.
-  Enabled: true
-
-Style/EachWithObject:
-  Description: 'Prefer `each_with_object` over `inject` or `reduce`.'
-  Enabled: true
-
 Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
-  Enabled: true
-
-Style/EmptyElse:
-  Description: 'Avoid empty else-clauses.'
-  Enabled: true
-
-Style/EmptyCaseCondition:
-  Description: 'Avoid empty condition in case statements.'
-  Enabled: true
-
-# true: メソッドの引数にはカッコを付ける false: つけなくてもよい
-Style/DefWithParentheses:
-  Description: 'Use def with parentheses when there are arguments.'
-  StyleGuide: '#method-parens'
   Enabled: true
 
 Layout/EmptyLinesAroundAccessModifier:
@@ -199,235 +77,6 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/EmptyLinesAroundMethodBody:
   Description: "Keeps track of empty lines around method bodies."
   StyleGuide: '#empty-lines-around-bodies'
-  Enabled: true
-
-Style/EmptyLiteral:
-  Description: 'Prefer literals to Array.new/Hash.new/String.new.'
-  StyleGuide: '#literal-array-hash'
-  Enabled: true
-
-Style/EmptyMethod:
-  Description: 'Checks the formatting of empty method definitions.'
-  StyleGuide: '#no-single-line-methods'
-  Enabled: true
-
-Style/EndBlock:
-  Description: 'Avoid the use of END blocks.'
-  StyleGuide: '#no-END-blocks'
-  Enabled: true
-
-Layout/EndOfLine:
-  Description: 'Use Unix-style line endings.'
-  StyleGuide: '#crlf'
-  Enabled: true
-
-Layout/ExtraSpacing:
-  Description: 'Do not use unnecessary spacing.'
-  Enabled: true
-
-Naming/FileName:
-  Description: 'Use snake_case for source file names.'
-  StyleGuide: '#snake-case-files'
-  Enabled: true
-  Exclude:
-    - 'vendor/**/*'
-
-Layout/InitialIndentation:
-  Description: >-
-    Checks the indentation of the first non-blank non-comment line in a file.
-  Enabled: true
-
-Style/FlipFlop:
-  Description: 'Checks for flip flops'
-  StyleGuide: '#no-flip-flops'
-  Enabled: true
-
-Style/For:
-  Description: 'Checks use of for or each in multiline loops.'
-  StyleGuide: '#no-for-loops'
-  Enabled: true
-
-Style/FormatString:
-  Description: 'Enforce the use of Kernel#sprintf, Kernel#format or String#%.'
-  StyleGuide: '#sprintf'
-  EnforcedStyle: format
-  Enabled: true
-
-Style/PerlBackrefs:
-  Description: 'Avoid Perl-style regex back references.'
-  StyleGuide: '#no-perl-regexp-last-matchers'
-  Enabled: true
-
-Style/IfUnlessModifier:
-  Description: >-
-                 Favor modifier if/unless usage when you have a
-                 single-line body.
-  StyleGuide: '#if-as-a-modifier'
-  Enabled: true
-
-Style/GuardClause:
-  Description: 'Check for conditionals that can be replaced with guard clauses'
-  StyleGuide: '#no-nested-conditionals'
-  Enabled: true
-
-Style/IfInsideElse:
-  Description: 'Finds if nodes inside else, which can be converted to elsif.'
-  Enabled: true
-
-Style/IfUnlessModifierOfIfUnless:
-  Description: >-
-                 Avoid modifier if/unless usage on conditionals.
-  Enabled: true
-
-Style/IfWithSemicolon:
-  Description: 'Do not use if x; .... Use the ternary operator instead.'
-  StyleGuide: '#no-semicolon-ifs'
-  Enabled: true
-
-Layout/IndentationWidth:
-  Description: 'Use 2 spaces for indentation.'
-  StyleGuide: '#spaces-indentation'
-  Enabled: true
-
-Style/IdenticalConditionalBranches:
-  Description: >-
-                 Checks that conditional statements do not have an identical
-                 line at the end of each branch, which can validly be moved
-                 out of the conditional.
-  Enabled: true
-
-Layout/IndentArray:
-  Description: >-
-                 Checks the indentation of the first element in an array
-                 literal.
-  Enabled: true
-
-Layout/IndentAssignment:
-  Description: >-
-                 Checks the indentation of the first line of the
-                 right-hand-side of a multi-line assignment.
-  Enabled: true
-
-Layout/IndentHash:
-  Description: 'Checks the indentation of the first key in a hash literal.'
-  Enabled: true
-
-Layout/IndentHeredoc:
-  Description: 'This cops checks the indentation of the here document bodies.'
-  StyleGuide: '#squiggly-heredocs'
-  Enabled: true
-
-Style/InfiniteLoop:
-  Description: 'Use Kernel#loop for infinite loops.'
-  StyleGuide: '#infinite-loop'
-  Enabled: true
-
-Style/InverseMethods:
-  Description: >-
-                 Use the inverse method instead of `!.method`
-                 if an inverse method is defined.
-  Enabled: true
-
-Layout/SpaceInLambdaLiteral:
-  Description: 'Checks for spaces in lambda literals.'
-  EnforcedStyle: require_no_space
-  Enabled: true
-
-Style/LambdaCall:
-  Description: 'Use lambda.call(...) instead of lambda.(...).'
-  StyleGuide: '#proc-call'
-  Enabled: true
-
-Style/LineEndConcatenation:
-  Description: >-
-                 Use \ instead of + or << to concatenate two string literals at
-                 line end.
-  Enabled: true
-
-Style/MethodCallWithoutArgsParentheses:
-  Description: 'Do not use parentheses for method calls with no arguments.'
-  StyleGuide: '#method-invocation-parens'
-  Enabled: true
-
-Style/MethodDefParentheses:
-  Description: >-
-                 Checks if the method definitions have or don't have
-                 parentheses.
-  StyleGuide: '#method-parens'
-  Enabled: true
-
-Naming/MethodName:
-  Description: 'Use the configured style when naming methods.'
-  StyleGuide: '#snake-case-symbols-methods-vars'
-  Enabled: true
-
-Style/MethodMissing:
-  Description: 'Avoid using `method_missing`.'
-  StyleGuide: '#no-method-missing'
-  Enabled: true
-
-Style/MixinGrouping:
-  Description: 'Checks for grouping of mixins in `class` and `module` bodies.'
-  StyleGuide: '#mixin-grouping'
-  EnforcedStyle: separated
-  Enabled: true
-
-Style/ModuleFunction:
-  Description: 'Checks for usage of `extend self` in modules.'
-  StyleGuide: '#module-function'
-  Enabled: true
-
-Layout/MultilineBlockLayout:
-  Description: 'Ensures newlines after multiline block do statements.'
-  Enabled: true
-
-Layout/MultilineHashBraceLayout:
-  Description: >-
-                 Checks that the closing brace in a hash literal is
-                 either on the same line as the last hash element, or
-                 a new line.
-  Enabled: true
-
-Style/MultilineIfThen:
-  Description: 'Do not use then for multi-line if/unless.'
-  StyleGuide: '#no-then'
-  Enabled: true
-
-# true: ハッシュキーがsymbolの場合、ハッシュロケット（'=>'）は使わない false: ハッシュロケットでもよい
-Style/HashSyntax:
-  Description: >-
-                 Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
-                 { :a => 1, :b => 2 }.
-  StyleGuide: '#hash-literals'
-  Enabled: true
-
-# true: 特別な場合以外はシングルコーテーション false: 自由
-Style/StringLiterals:
-  Description: 'Checks if uses of quotes match the configured preference.'
-  StyleGuide: '#consistent-string-literals'
-  Enabled: true
-
-# true: .map { |s| s.upcase } ではなく .map(&:upcase) を使う
-Style/SymbolProc:
-  Description: 'Use symbols as procs instead of blocks when possible.'
-  Enabled: true
-
-# true: unless-elseを許可しない false: unless-elseを許可する
-Style/UnlessElse:
-  Description: >-
-                 Do not use unless with else. Rewrite these with the positive
-                 case first.
-  StyleGuide: '#no-else-with-unless'
-  Enabled: true
-
-Style/AndOr:
-  Description: 'Use &&/|| instead of and/or.'
-  StyleGuide: '#no-and-or-or'
-  Enabled: true
-
-Style/BarePercentLiterals:
-  Description: 'Checks if usage of %() or %Q() matches configuration.'
-  StyleGuide: '#percent-q-shorthand'
   Enabled: true
 
 # true: case-when文のインデントで、whenをcaseに合わせてインデントする（代入時等） false: チェックしない
@@ -519,51 +168,24 @@ Layout/TrailingBlankLines:
   StyleGuide: '#newline-eof'
   Enabled: true
 
-# true: 変数名はsnake_caseとする false: チェックしない
-Naming/VariableName:
-  Description: 'Use the configured style when naming variables.'
-  StyleGuide: '#snake-case-symbols-methods-vars'
+Layout/DefEndAlignment:
+  Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
-Naming/AccessorMethodName:
-  Description: 'Check the naming of accessor methods for get_/set_.'
-  StyleGuide: '#accessor_mutator_method_names'
-  Enabled: true
-
-# true: 省略可能な'self.'は省略しなければならない false: 自由に'self.'書いて良い
-Style/RedundantSelf:
-  Description: "Don't use self where it's not needed."
-  StyleGuide: '#no-self-unless-required'
-  Enabled: true
-
-Style/FrozenStringLiteralComment:
+Layout/ConditionPosition:
   Description: >-
-                 Add the frozen_string_literal comment to the top of files
-                 to help transition from Ruby 2.3.0 to Ruby 3.0.
+                 Checks for condition placed in a confusing position relative to
+                 the keyword.
+  StyleGuide: '#same-line-condition'
   Enabled: true
 
-Style/TrailingCommaInArguments:
-  Description: 'Checks for trailing comma in argument lists.'
-  StyleGuide: '#no-trailing-params-comma'
-  EnforcedStyleForMultiline: comma
+Layout/EndOfLine:
+  Description: 'Use Unix-style line endings.'
+  StyleGuide: '#crlf'
   Enabled: true
 
-Style/TrailingCommaInLiteral:
-  Description: 'Checks for trailing comma in array and hash literals.'
-  StyleGuide: '#no-trailing-array-commas'
-  EnforcedStyleForMultiline: comma
-  Enabled: true
-
-Style/IfUnlessModifier:
-  Description: >-
-                 Favor modifier if/unless usage when you have a
-                 single-line body.
-  StyleGuide: '#if-as-a-modifier'
-  Enabled: true
-
-Style/RegexpLiteral:
-  Description: 'Use / or %r around regular expressions.'
-  StyleGuide: '#percent-r'
+Layout/ExtraSpacing:
+  Description: 'Do not use unnecessary spacing.'
   Enabled: true
 
 Layout/MultilineMethodCallBraceLayout:
@@ -574,10 +196,65 @@ Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: symmetrical
   Enabled: true
 
-Style/MultilineMemoization:
-  Description: 'Wrap multiline memoizations in a begin and end block.'
-  EnforcedStyle: braces
-  Enabled: false
+Layout/InitialIndentation:
+  Description: >-
+    Checks the indentation of the first non-blank non-comment line in a file.
+  Enabled: true
+
+Layout/IndentArray:
+  Description: >-
+                 Checks the indentation of the first element in an array
+                 literal.
+  Enabled: true
+
+Layout/IndentAssignment:
+  Description: >-
+                 Checks the indentation of the first line of the
+                 right-hand-side of a multi-line assignment.
+  Enabled: true
+
+Layout/IndentHash:
+  Description: 'Checks the indentation of the first key in a hash literal.'
+  Enabled: true
+
+Layout/IndentHeredoc:
+  Description: 'This cops checks the indentation of the here document bodies.'
+  StyleGuide: '#squiggly-heredocs'
+  Enabled: true
+
+Layout/MultilineOperationIndentation:
+  Description: >-
+                  Checks indentation of binary operations that span more than
+                  one line.
+  EnforcedStyle: indented
+  IndentationWidth: 2
+  Enabled: true
+
+Layout/IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: true
+
+Layout/SpaceInLambdaLiteral:
+  Description: 'Checks for spaces in lambda literals.'
+  EnforcedStyle: require_no_space
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Description: 'Add an empty line after magic comments to separate them from code.'
+  StyleGuide: '#separate-magic-comments-from-code'
+  Enabled: true
+
+Layout/MultilineBlockLayout:
+  Description: 'Ensures newlines after multiline block do statements.'
+  Enabled: true
+
+Layout/MultilineHashBraceLayout:
+  Description: >-
+                 Checks that the closing brace in a hash literal is
+                 either on the same line as the last hash element, or
+                 a new line.
+  Enabled: true
 
 Layout/MultilineMethodCallIndentation:
   Description: >-
@@ -594,171 +271,14 @@ Layout/MultilineMethodDefinitionBraceLayout:
   EnforcedStyle: symmetrical
   Enabled: true
 
-Style/MultilineTernaryOperator:
-  Description: >-
-                  Avoid multi-line ?: (the ternary operator);
-                  use if/unless instead.
-  StyleGuide: '#no-multiline-ternary'
+Layout/TrailingWhitespace:
+  Description: 'Avoid trailing whitespace.'
+  StyleGuide: '#no-trailing-whitespace'
   Enabled: true
 
-Style/NegatedIf:
-  Description: >-
-                  Favor unless over if for negative conditions
-                  (or control flow or).
-  StyleGuide: '#unless-for-negatives'
-  Enabled: true
-
-Style/NegatedWhile:
-  Description: 'Favor until over while for negative conditions.'
-  StyleGuide: '#until-for-negatives'
-  Enabled: true
-
-Style/NestedModifier:
-  Description: 'Avoid using nested modifiers.'
-  StyleGuide: '#no-nested-modifiers'
-  Enabled: true
-
-Style/NestedParenthesizedCalls:
-  Description: >-
-                  Parenthesize method calls which are nested inside the
-                  argument list of another parenthesized method call.
-  Enabled: true
-
-Style/NestedTernaryOperator:
-  Description: 'Use one expression per branch in a ternary operator.'
-  StyleGuide: '#no-nested-ternary'
-  Enabled: true
-
-Layout/EmptyLineAfterMagicComment:
-  Description: 'Add an empty line after magic comments to separate them from code.'
-  StyleGuide: '#separate-magic-comments-from-code'
-  Enabled: true
-
-Style/Next:
-  Description: 'Use next to skip iteration instead of a condition at the end.'
-  StyleGuide: '#no-nested-conditionals'
-  Enabled: true
-
-Style/NilComparison:
-  Description: 'Prefer x.nil? to x == nil.'
-  StyleGuide: '#predicate-methods'
-  Enabled: true
-
-Style/NonNilCheck:
-  Description: 'Checks for redundant nil checks.'
-  StyleGuide: '#no-non-nil-checks'
-  Enabled: true
-
-Style/Not:
-  Description: 'Use ! instead of not.'
-  StyleGuide: '#bang-not-not'
-  Enabled: true
-
-Style/OneLineConditional:
-  Description: >-
-                 Favor the ternary operator(?:) over
-                 if/then/else/end constructs.
-  StyleGuide: '#ternary-operator'
-  Enabled: true
-
-Naming/BinaryOperatorParameterName:
-  Description: 'When defining binary operators, name the argument other.'
-  StyleGuide: '#other-arg'
-  Enabled: true
-
-Style/OptionalArguments:
-  Description: >-
-                 Checks for optional arguments that do not appear at the end
-                 of the argument list
-  StyleGuide: '#optional-arguments'
-  Enabled: true
-
-Style/ParenthesesAroundCondition:
-  Description: >-
-                 Don't use parentheses around the condition of an
-                 if/unless/while.
-  StyleGuide: '#no-parens-around-condition'
-  AllowSafeAssignment: true
-  Enabled: true
-
-Style/PercentLiteralDelimiters:
-  Description: 'Use `%`-literal delimiters consistently'
-  StyleGuide: '#percent-literal-braces'
-  Enabled: true
-
-Style/PercentQLiterals:
-  Description: 'Checks if uses of %Q/%q match the configured preference.'
-  Enabled: true
-
-Naming/PredicateName:
-  Description: 'Check the names of predicate methods.'
-  StyleGuide: '#bool-methods-qmark'
-  Enabled: true
-
-Style/PreferredHashMethods:
-  Description: 'Checks use of `has_key?` and `has_value?` Hash methods.'
-  StyleGuide: '#hash-key'
-  Enabled: true
-
-Style/Proc:
-  Description: 'Use proc instead of Proc.new.'
-  StyleGuide: '#proc'
-  Enabled: true
-
-Style/RedundantBegin:
-  Description: "Don't use begin blocks when they are not needed."
-  StyleGuide: '#begin-implicit'
-  Enabled: true
-
-Style/RedundantException:
-  Description: "Checks for an obsolete RuntimeException argument in raise/fail."
-  StyleGuide: '#no-explicit-runtimeerror'
-  Enabled: true
-
-Style/RedundantFreeze:
-  Description: "Checks usages of Object#freeze on immutable objects."
-  Enabled: true
-
-Style/RedundantParentheses:
-  Description: "Checks for parentheses that seem not to serve any purpose."
-  Enabled: true
-
-Style/RedundantReturn:
-  Description: "Don't use return where it's not required."
-  StyleGuide: '#no-explicit-return'
-  Enabled: true
-
-Layout/RescueEnsureAlignment:
-  Description: 'Align rescues and ensures correctly.'
-  Enabled: true
-
-Style/SafeNavigation:
-  Description: >-
-                  This cop transforms usages of a method call safeguarded by
-                  a check for the existance of the object to
-                  safe navigation (`&.`).
-  Enabled: true
-
-Style/SelfAssignment:
-  Description: >-
-                 Checks for places where self-assignment shorthand should have
-                 been used.
-  StyleGuide: '#self-assignment'
-  Enabled: true
-
-Style/Semicolon:
-  Description: "Don't use semicolons to terminate expressions."
-  StyleGuide: '#no-semicolon'
-  Enabled: true
-
-Style/SignalException:
-  Description: 'Checks for proper usage of fail and raise.'
-  StyleGuide: '#prefer-raise-over-fail'
-  Enabled: true
-
-Style/SingleLineMethods:
-  Description: 'Avoid single-line methods.'
-  StyleGuide: '#no-single-line-methods'
+Layout/Tab:
+  Description: 'No hard tabs.'
+  StyleGuide: '#spaces-indentation'
   Enabled: true
 
 Layout/SpaceBeforeFirstArg:
@@ -826,6 +346,523 @@ Layout/SpaceInsideStringInterpolation:
   StyleGuide: '#string-interpolation'
   Enabled: true
 
+Layout/RescueEnsureAlignment:
+  Description: 'Align rescues and ensures correctly.'
+  Enabled: true
+
+Layout/BlockAlignment:
+  Description: 'Align block ends correctly.'
+  Enabled: true
+
+#################### Naming ###############################
+
+Naming/AsciiIdentifiers:
+  Description: 'Use only ascii symbols in identifiers.'
+  StyleGuide: '#english-identifiers'
+  Enabled: true
+
+Naming/ClassAndModuleCamelCase:
+  Description: 'Use CamelCase for classes and modules.'
+  StyleGuide: '#camelcase-classes'
+  Enabled: true
+
+Naming/ConstantName:
+  Description: 'Constants should use SCREAMING_SNAKE_CASE.'
+  StyleGuide: '#screaming-snake-case'
+  Enabled: true
+
+Naming/FileName:
+  Description: 'Use snake_case for source file names.'
+  StyleGuide: '#snake-case-files'
+  Enabled: true
+  Exclude:
+    - 'vendor/**/*'
+
+Naming/MethodName:
+  Description: 'Use the configured style when naming methods.'
+  StyleGuide: '#snake-case-symbols-methods-vars'
+  Enabled: true
+
+# true: 変数名はsnake_caseとする false: チェックしない
+Naming/VariableName:
+  Description: 'Use the configured style when naming variables.'
+  StyleGuide: '#snake-case-symbols-methods-vars'
+  Enabled: true
+
+Naming/AccessorMethodName:
+  Description: 'Check the naming of accessor methods for get_/set_.'
+  StyleGuide: '#accessor_mutator_method_names'
+  Enabled: true
+
+Naming/BinaryOperatorParameterName:
+  Description: 'When defining binary operators, name the argument other.'
+  StyleGuide: '#other-arg'
+  Enabled: true
+
+Naming/PredicateName:
+  Description: 'Check the names of predicate methods.'
+  StyleGuide: '#bool-methods-qmark'
+  Enabled: true
+
+#################### Style ################################
+
+Style/Alias:
+  Description: 'Use alias instead of alias_method.'
+  StyleGuide: '#alias-method'
+  EnforcedStyle: prefer_alias_method
+  Enabled: true
+
+Style/BracesAroundHashParameters:
+  Description: 'Enforce braces style around hash parameters.'
+  EnforcedStyle: no_braces
+  Enabled: true
+
+Style/BlockDelimiters:
+  Description: >-
+                Avoid using {...} for multi-line blocks (multiline chaining is
+                always ugly).
+                Prefer {...} over do...end for single-line blocks.
+  StyleGuide: '#single-line-blocks'
+  EnforcedStyle: braces_for_chaining
+  Enabled: true
+
+Style/ArrayJoin:
+  Description: 'Use Array#join instead of Array#*.'
+  StyleGuide: '#array-join'
+  Enabled: true
+
+Style/Attr:
+  Description: 'Checks for uses of Module#attr.'
+  StyleGuide: '#attr'
+  Enabled: true
+
+Style/CaseEquality:
+  Description: 'Avoid explicit use of the case equality operator(===).'
+  StyleGuide: '#no-case-equality'
+  Enabled: true
+
+Style/CharacterLiteral:
+  Description: 'Checks for uses of character literals.'
+  StyleGuide: '#no-character-literals'
+  Enabled: true
+
+Style/ClassCheck:
+  Description: 'Enforces consistent use of `Object#is_a?` or `Object#kind_of?`.'
+  Enabled: true
+
+Style/ClassMethods:
+  Description: 'Use self when defining module/class methods.'
+  StyleGuide: '#def-self-class-methods'
+  Enabled: true
+
+Style/ClassVars:
+  Description: 'Avoid the use of class variables.'
+  StyleGuide: '#no-class-vars'
+  Enabled: true
+
+Style/ColonMethodCall:
+  Description: 'Do not use :: for method call.'
+  StyleGuide: '#double-colons'
+  Enabled: true
+
+Style/CommandLiteral:
+  Description: 'Use `` or %x around command literals.'
+  StyleGuide: '#percent-x'
+  Enabled: true
+
+Style/CommentAnnotation:
+  Description: >-
+                 Checks formatting of special comments
+                 (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
+  StyleGuide: '#annotate-keywords'
+  Enabled: true
+
+Style/ConditionalAssignment:
+  Description: >-
+                 Use the return value of `if` and `case` statements for
+                 assignment to a variable and variable comparison instead
+                 of assigning that variable inside of each branch.
+  Enabled: true
+
+Style/DoubleNegation:
+  Description: 'Checks for uses of double negation (!!).'
+  StyleGuide: '#no-bang-bang'
+  Enabled: true
+
+Style/EachForSimpleLoop:
+  Description: >-
+                 Use `Integer#times` for a simple loop which iterates a fixed
+                 number of times.
+  Enabled: true
+
+Style/EachWithObject:
+  Description: 'Prefer `each_with_object` over `inject` or `reduce`.'
+  Enabled: true
+
+Style/EmptyElse:
+  Description: 'Avoid empty else-clauses.'
+  Enabled: true
+
+Style/EmptyCaseCondition:
+  Description: 'Avoid empty condition in case statements.'
+  Enabled: true
+
+# true: メソッドの引数にはカッコを付ける false: つけなくてもよい
+Style/DefWithParentheses:
+  Description: 'Use def with parentheses when there are arguments.'
+  StyleGuide: '#method-parens'
+  Enabled: true
+
+Style/EmptyLiteral:
+  Description: 'Prefer literals to Array.new/Hash.new/String.new.'
+  StyleGuide: '#literal-array-hash'
+  Enabled: true
+
+Style/EmptyMethod:
+  Description: 'Checks the formatting of empty method definitions.'
+  StyleGuide: '#no-single-line-methods'
+  Enabled: true
+
+Style/EndBlock:
+  Description: 'Avoid the use of END blocks.'
+  StyleGuide: '#no-END-blocks'
+  Enabled: true
+
+Style/FlipFlop:
+  Description: 'Checks for flip flops'
+  StyleGuide: '#no-flip-flops'
+  Enabled: true
+
+Style/For:
+  Description: 'Checks use of for or each in multiline loops.'
+  StyleGuide: '#no-for-loops'
+  Enabled: true
+
+Style/FormatString:
+  Description: 'Enforce the use of Kernel#sprintf, Kernel#format or String#%.'
+  StyleGuide: '#sprintf'
+  EnforcedStyle: format
+  Enabled: true
+
+Style/PerlBackrefs:
+  Description: 'Avoid Perl-style regex back references.'
+  StyleGuide: '#no-perl-regexp-last-matchers'
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Description: >-
+                 Favor modifier if/unless usage when you have a
+                 single-line body.
+  StyleGuide: '#if-as-a-modifier'
+  Enabled: true
+
+Style/GuardClause:
+  Description: 'Check for conditionals that can be replaced with guard clauses'
+  StyleGuide: '#no-nested-conditionals'
+  Enabled: true
+
+Style/IfInsideElse:
+  Description: 'Finds if nodes inside else, which can be converted to elsif.'
+  Enabled: true
+
+Style/IfUnlessModifierOfIfUnless:
+  Description: >-
+                 Avoid modifier if/unless usage on conditionals.
+  Enabled: true
+
+Style/IfWithSemicolon:
+  Description: 'Do not use if x; .... Use the ternary operator instead.'
+  StyleGuide: '#no-semicolon-ifs'
+  Enabled: true
+
+Style/IdenticalConditionalBranches:
+  Description: >-
+                 Checks that conditional statements do not have an identical
+                 line at the end of each branch, which can validly be moved
+                 out of the conditional.
+  Enabled: true
+
+Style/InfiniteLoop:
+  Description: 'Use Kernel#loop for infinite loops.'
+  StyleGuide: '#infinite-loop'
+  Enabled: true
+
+Style/InverseMethods:
+  Description: >-
+                 Use the inverse method instead of `!.method`
+                 if an inverse method is defined.
+  Enabled: true
+
+Style/LambdaCall:
+  Description: 'Use lambda.call(...) instead of lambda.(...).'
+  StyleGuide: '#proc-call'
+  Enabled: true
+
+Style/LineEndConcatenation:
+  Description: >-
+                 Use \ instead of + or << to concatenate two string literals at
+                 line end.
+  Enabled: true
+
+Style/MethodCallWithoutArgsParentheses:
+  Description: 'Do not use parentheses for method calls with no arguments.'
+  StyleGuide: '#method-invocation-parens'
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Description: >-
+                 Checks if the method definitions have or don't have
+                 parentheses.
+  StyleGuide: '#method-parens'
+  Enabled: true
+
+Style/MethodMissing:
+  Description: 'Avoid using `method_missing`.'
+  StyleGuide: '#no-method-missing'
+  Enabled: true
+
+Style/MixinGrouping:
+  Description: 'Checks for grouping of mixins in `class` and `module` bodies.'
+  StyleGuide: '#mixin-grouping'
+  EnforcedStyle: separated
+  Enabled: true
+
+Style/ModuleFunction:
+  Description: 'Checks for usage of `extend self` in modules.'
+  StyleGuide: '#module-function'
+  Enabled: true
+
+Style/MultilineIfThen:
+  Description: 'Do not use then for multi-line if/unless.'
+  StyleGuide: '#no-then'
+  Enabled: true
+
+# true: ハッシュキーがsymbolの場合、ハッシュロケット（'=>'）は使わない false: ハッシュロケットでもよい
+Style/HashSyntax:
+  Description: >-
+                 Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
+                 { :a => 1, :b => 2 }.
+  StyleGuide: '#hash-literals'
+  Enabled: true
+
+# true: 特別な場合以外はシングルコーテーション false: 自由
+Style/StringLiterals:
+  Description: 'Checks if uses of quotes match the configured preference.'
+  StyleGuide: '#consistent-string-literals'
+  Enabled: true
+
+# true: .map { |s| s.upcase } ではなく .map(&:upcase) を使う
+Style/SymbolProc:
+  Description: 'Use symbols as procs instead of blocks when possible.'
+  Enabled: true
+
+# true: unless-elseを許可しない false: unless-elseを許可する
+Style/UnlessElse:
+  Description: >-
+                 Do not use unless with else. Rewrite these with the positive
+                 case first.
+  StyleGuide: '#no-else-with-unless'
+  Enabled: true
+
+Style/AndOr:
+  Description: 'Use &&/|| instead of and/or.'
+  StyleGuide: '#no-and-or-or'
+  Enabled: true
+
+Style/BarePercentLiterals:
+  Description: 'Checks if usage of %() or %Q() matches configuration.'
+  StyleGuide: '#percent-q-shorthand'
+  Enabled: true
+
+# true: 省略可能な'self.'は省略しなければならない false: 自由に'self.'書いて良い
+Style/RedundantSelf:
+  Description: "Don't use self where it's not needed."
+  StyleGuide: '#no-self-unless-required'
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+                 Add the frozen_string_literal comment to the top of files
+                 to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  Description: 'Checks for trailing comma in argument lists.'
+  StyleGuide: '#no-trailing-params-comma'
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+
+Style/TrailingCommaInLiteral:
+  Description: 'Checks for trailing comma in array and hash literals.'
+  StyleGuide: '#no-trailing-array-commas'
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Description: >-
+                 Favor modifier if/unless usage when you have a
+                 single-line body.
+  StyleGuide: '#if-as-a-modifier'
+  Enabled: true
+
+Style/RegexpLiteral:
+  Description: 'Use / or %r around regular expressions.'
+  StyleGuide: '#percent-r'
+  Enabled: true
+
+Style/MultilineMemoization:
+  Description: 'Wrap multiline memoizations in a begin and end block.'
+  EnforcedStyle: braces
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Description: >-
+                  Avoid multi-line ?: (the ternary operator);
+                  use if/unless instead.
+  StyleGuide: '#no-multiline-ternary'
+  Enabled: true
+
+Style/NegatedIf:
+  Description: >-
+                  Favor unless over if for negative conditions
+                  (or control flow or).
+  StyleGuide: '#unless-for-negatives'
+  Enabled: true
+
+Style/NegatedWhile:
+  Description: 'Favor until over while for negative conditions.'
+  StyleGuide: '#until-for-negatives'
+  Enabled: true
+
+Style/NestedModifier:
+  Description: 'Avoid using nested modifiers.'
+  StyleGuide: '#no-nested-modifiers'
+  Enabled: true
+
+Style/NestedParenthesizedCalls:
+  Description: >-
+                  Parenthesize method calls which are nested inside the
+                  argument list of another parenthesized method call.
+  Enabled: true
+
+Style/NestedTernaryOperator:
+  Description: 'Use one expression per branch in a ternary operator.'
+  StyleGuide: '#no-nested-ternary'
+  Enabled: true
+
+Style/Next:
+  Description: 'Use next to skip iteration instead of a condition at the end.'
+  StyleGuide: '#no-nested-conditionals'
+  Enabled: true
+
+Style/NilComparison:
+  Description: 'Prefer x.nil? to x == nil.'
+  StyleGuide: '#predicate-methods'
+  Enabled: true
+
+Style/NonNilCheck:
+  Description: 'Checks for redundant nil checks.'
+  StyleGuide: '#no-non-nil-checks'
+  Enabled: true
+
+Style/Not:
+  Description: 'Use ! instead of not.'
+  StyleGuide: '#bang-not-not'
+  Enabled: true
+
+Style/OneLineConditional:
+  Description: >-
+                 Favor the ternary operator(?:) over
+                 if/then/else/end constructs.
+  StyleGuide: '#ternary-operator'
+  Enabled: true
+
+Style/OptionalArguments:
+  Description: >-
+                 Checks for optional arguments that do not appear at the end
+                 of the argument list
+  StyleGuide: '#optional-arguments'
+  Enabled: true
+
+Style/ParenthesesAroundCondition:
+  Description: >-
+                 Don't use parentheses around the condition of an
+                 if/unless/while.
+  StyleGuide: '#no-parens-around-condition'
+  AllowSafeAssignment: true
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  Description: 'Use `%`-literal delimiters consistently'
+  StyleGuide: '#percent-literal-braces'
+  Enabled: true
+
+Style/PercentQLiterals:
+  Description: 'Checks if uses of %Q/%q match the configured preference.'
+  Enabled: true
+
+Style/PreferredHashMethods:
+  Description: 'Checks use of `has_key?` and `has_value?` Hash methods.'
+  StyleGuide: '#hash-key'
+  Enabled: true
+
+Style/Proc:
+  Description: 'Use proc instead of Proc.new.'
+  StyleGuide: '#proc'
+  Enabled: true
+
+Style/RedundantBegin:
+  Description: "Don't use begin blocks when they are not needed."
+  StyleGuide: '#begin-implicit'
+  Enabled: true
+
+Style/RedundantException:
+  Description: "Checks for an obsolete RuntimeException argument in raise/fail."
+  StyleGuide: '#no-explicit-runtimeerror'
+  Enabled: true
+
+Style/RedundantFreeze:
+  Description: "Checks usages of Object#freeze on immutable objects."
+  Enabled: true
+
+Style/RedundantParentheses:
+  Description: "Checks for parentheses that seem not to serve any purpose."
+  Enabled: true
+
+Style/RedundantReturn:
+  Description: "Don't use return where it's not required."
+  StyleGuide: '#no-explicit-return'
+  Enabled: true
+
+Style/SafeNavigation:
+  Description: >-
+                  This cop transforms usages of a method call safeguarded by
+                  a check for the existance of the object to
+                  safe navigation (`&.`).
+  Enabled: true
+
+Style/SelfAssignment:
+  Description: >-
+                 Checks for places where self-assignment shorthand should have
+                 been used.
+  StyleGuide: '#self-assignment'
+  Enabled: true
+
+Style/Semicolon:
+  Description: "Don't use semicolons to terminate expressions."
+  StyleGuide: '#no-semicolon'
+  Enabled: true
+
+Style/SignalException:
+  Description: 'Checks for proper usage of fail and raise.'
+  StyleGuide: '#prefer-raise-over-fail'
+  Enabled: true
+
+Style/SingleLineMethods:
+  Description: 'Avoid single-line methods.'
+  StyleGuide: '#no-single-line-methods'
+  Enabled: true
+
 Style/SpecialGlobalVars:
   Description: 'Avoid Perl-style global variables.'
   StyleGuide: '#no-cryptic-perlisms'
@@ -856,18 +893,8 @@ Style/SymbolLiteral:
   Description: 'Use plain symbols instead of string symbols when possible.'
   Enabled: true
 
-Layout/Tab:
-  Description: 'No hard tabs.'
-  StyleGuide: '#spaces-indentation'
-  Enabled: true
-
 Style/TernaryParentheses:
   Description: 'Checks for use of parentheses around ternary conditions.'
-  Enabled: true
-
-Layout/TrailingWhitespace:
-  Description: 'Avoid trailing whitespace.'
-  StyleGuide: '#no-trailing-whitespace'
   Enabled: true
 
 Style/TrivialAccessors:
@@ -926,14 +953,6 @@ Style/WordArray:
 
 Style/ZeroLengthPredicate:
   Description: 'Use #empty? when testing for objects of length 0.'
-  Enabled: true
-
-Layout/MultilineOperationIndentation:
-  Description: >-
-                  Checks indentation of binary operations that span more than
-                  one line.
-  EnforcedStyle: indented
-  IndentationWidth: 2
   Enabled: true
 
 ##################### Lint ################################
@@ -1050,10 +1069,6 @@ Lint/AmbiguousRegexpLiteral:
   Description: 'Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.'
   Enabled: true
 
-Layout/BlockAlignment:
-  Description: 'Align block ends correctly.'
-  Enabled: true
-
 Lint/CircularArgumentReference:
   Description: "Default values in optional keyword arguments and optional ordinal arguments should not refer back to the name of the argument."
   Enabled: true
@@ -1165,18 +1180,6 @@ Lint/DuplicateCaseCondition:
 Lint/DeprecatedClassMethods:
   Description: 'Check for deprecated class method calls.'
   Enabled: true
-
-Layout/DefEndAlignment:
-  Description: 'Align ends corresponding to defs correctly.'
-  Enabled: true
-
-Layout/ConditionPosition:
-  Description: >-
-                 Checks for condition placed in a confusing position relative to
-                 the keyword.
-  StyleGuide: '#same-line-condition'
-  Enabled: true
-
 
 #################### Metrics ##############################
 
@@ -1373,3 +1376,12 @@ Security/YAMLLoad:
     - 'Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.'
   Reference: 'https://ruby-doc.org/stdlib-2.3.3/libdoc/yaml/rdoc/YAML.html#module-YAML-label-Security'
   Enabled: true
+
+#################### Bundler ##############################
+
+Bundler/DuplicatedGem:
+  Description: 'Checks for duplicate gem entries in Gemfile.'
+  Enabled: true
+  Include:
+    - '**/Gemfile'
+    - '**/gems.rb'
