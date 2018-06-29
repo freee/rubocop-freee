@@ -150,10 +150,12 @@ Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
   Enabled: true
 
-# true: 角括弧の中にカンマのあと以外のスペースは書かない false: その他のスペースも許可
-Layout/SpaceInsideBrackets:
-  Description: 'No spaces after [ or before ].'
-  StyleGuide: '#no-spaces-braces'
+Layout/SpaceInsideArrayLiteralBrackets:
+  Description: "Checks that brackets used for array literals have or don't have surrounding space depending on configuration."
+  Enabled: true
+
+Layout/SpaceInsideReferenceBrackets:
+  Description: "Checks that reference brackets have or don't have surrounding space depending on configuration."
   Enabled: true
 
 # true: ハッシュの開始、終了にスペース必須 false: スペース不要
@@ -616,8 +618,13 @@ Style/MethodDefParentheses:
   StyleGuide: '#method-parens'
   Enabled: true
 
-Style/MethodMissing:
-  Description: 'Avoid using `method_missing`.'
+Style/MethodMissingSuper:
+  Description: 'Avoid using `method_missing` without falling back on `super`.'
+  StyleGuide: '#no-method-missing'
+  Enabled: true
+
+Style/MissingRespondToMissing:
+  Description: 'Avoid using `method_missing` without also defining `respond_to_missing?`.'
   StyleGuide: '#no-method-missing'
   Enabled: true
 
@@ -692,8 +699,14 @@ Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
   Enabled: true
 
-Style/TrailingCommaInLiteral:
-  Description: 'Checks for trailing comma in array and hash literals.'
+Style/TrailingCommaInArrayLiteral:
+  Description: 'Checks for trailing comma in array literals.'
+  StyleGuide: '#no-trailing-array-commas'
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+
+Style/TrailingCommaInHashLiteral:
+  Description: 'Checks for trailing comma in hash literals.'
   StyleGuide: '#no-trailing-array-commas'
   EnforcedStyleForMultiline: comma
   Enabled: true
@@ -1099,12 +1112,6 @@ Lint/LiteralAsCondition:
   Description: 'Checks of literals used in conditions.'
   Enabled: true
 
-Lint/InvalidCharacterLiteral:
-  Description: >-
-                 Checks for invalid character literals with a non-escaped
-                 whitespace character.
-  Enabled: true
-
 Lint/InheritException:
   Description: 'Avoid inheriting from the `Exception` class.'
   EnforcedStyle: standard_error
@@ -1228,12 +1235,6 @@ Metrics/AbcSize:
 Performance/RedundantSortBy:
   Description: 'Use `sort` instead of `sort_by { |x| x }`.'
   Enabled: true
-
-Performance/HashEachMethods:
-  Description: 'Use `Hash#each_key` and `Hash#each_value` instead of `Hash#keys.each` and `Hash#values.each`.'
-  StyleGuide: '#hash-each'
-  Enabled: true
-  AutoCorrect: false
 
 Performance/LstripRstrip:
   Description: 'Use `strip` instead of `lstrip.rstrip`.'
