@@ -25,7 +25,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject {|f| f =~ %r{^(test|spec|features)/} }
   spec.licenses      = ['MIT']
 
-  spec.add_dependency 'rubocop', '= 0.48.1'
+  spec.add_dependency 'mry'
+  spec.add_dependency 'rubocop', '~> 0.57'
   spec.add_dependency 'rubocop-rspec'
   spec.add_dependency 'rubocop-checkstyle_formatter'
 
