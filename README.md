@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/freee/rubocop-freee.svg?style=svg&circle-token=8056c3c2ee5e07d0bbf86f404d7d5aea81df65c7)](https://circleci.com/gh/freee/rubocop-freee)
+
 # Rubocop freee
 
 This repository provides recommended Rubocop configuration and additional cops for use on internal Ruby Projects.
