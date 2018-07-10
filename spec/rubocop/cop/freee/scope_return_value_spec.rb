@@ -43,14 +43,14 @@ describe RuboCop::Cop::Freee::ScopeReturnValue do
     SOURCE
   end
 
-  context 'good' do
+  context 'with good' do
     it do
       inspect_source(cop, good_source)
       expect(cop.offenses).to be_empty
     end
   end
 
-  context 'bad' do
+  context 'with bad' do
     it do
       inspect_source(cop, bad_source)
       expect(cop.offenses.size).to eq(2)
