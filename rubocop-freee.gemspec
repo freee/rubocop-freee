@@ -13,14 +13,6 @@ Gem::Specification.new do |spec|
   spec.description = 'this rubocop gem use on internal Ruby Projects'
   spec.homepage = 'https://github.com/freee/rubocop-freee'
 
-  # Prevent pushing this gem to RubyGems.org.
-  # To allow pushes either set the 'allowed_push_host'
-  # To allow pushing to a single host or delete this section to allow pushing to any host.
-  unless spec.respond_to?(:metadata)
-    raise 'RubyGems 2.0 or newer is required to project against public gem pushes.'
-  end
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.require_paths = ['lib']
   spec.files         = `git ls-files -z`.split("\x0").reject {|f| f =~ %r{^(test|spec|features)/} }
   spec.licenses      = ['MIT']
