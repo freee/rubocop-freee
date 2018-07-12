@@ -2,6 +2,10 @@
 
 This repository provides recommended Rubocop configuration and additional cops for use on internal Ruby Projects.
 
+## Requirements
+
+- Ruby: 2.3 or higher
+
 ## Installation
 
 app/Gemfile
@@ -38,7 +42,7 @@ Freee/ScopeReturnValue:
   Enabled: true
 ```
 
-### requires the new cop in `lib/rubocop-freee.rb` .
+### requires the new cop in `lib/rubocop_freee.rb` .
 
 ```ruby
 require 'rubocop/cop/freee/scope_return_value'

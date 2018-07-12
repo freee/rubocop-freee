@@ -1,0 +1,150 @@
+Rails:
+  Enabled: true
+
+require: rubocop/cop/freee
+
+#################### Freee ################################
+
+Freee/ScopeReturnValue:
+  Description: 'Check if an scope returns self.'
+  Enabled: true
+
+# Enabled
+
+Rails/SafeNavigation:
+  Description: "Use Ruby's safe navigation operator (`&.`) instead of `try!`"
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Description: 'Use `find_by` instead of dynamic `find_by_*`.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find_by'
+  Enabled: true
+
+Rails/PluralizationGrammar:
+  Description: 'Checks for incorrect grammar when using methods like `3.day.ago`.'
+  Enabled: true
+
+Rails/OutputSafety:
+  Description: 'The use of `html_safe` or `raw` may be a security risk.'
+  Enabled: true
+
+Rails/FindBy:
+  Description: 'Prefer find_by over where.first.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find_by'
+  Enabled: true
+
+Rails/FindEach:
+  Description: 'Prefer all.find_each over all.find.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#find-each'
+  Enabled: true
+
+Rails/HasAndBelongsToMany:
+  Description: 'Prefer has_many :through to has_and_belongs_to_many.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#has-many-through'
+  Enabled: true
+
+Rails/EnumUniqueness:
+  Description: 'Avoid duplicate integers in hash-syntax `enum` declaration.'
+  Enabled: true
+
+Rails/ActionFilter:
+  Description: 'Enforces consistent use of action filter methods.'
+  Enabled: true
+
+# Disabled
+
+Rails/ActiveSupportAliases:
+  Description: 'Avoid ActiveSupport aliases of standard ruby methods: `String#starts_with?`, `String#ends_with?`, `Array#append`, `Array#prepend`.'
+  Enabled: false
+
+Rails/Blank:
+  Description: 'Enforce using `blank?` and `present?`.'
+  Enabled: false
+  NilOrEmpty: true  # Convert checks for `nil` or `empty?` to `blank?`
+  NotPresent: true  # Convert usages of not `present?` to `blank?`
+  UnlessPresent: true  # Convert usages of `unless` `present?` to `if` `blank?`
+
+Rails/Date:
+  Description: 'Checks the correct usage of date aware methods, such as Date.today, Date.current etc.'
+  Enabled: false
+
+Rails/Delegate:
+  Description: 'Prefer delegate method for delegations.'
+  Enabled: false
+
+Rails/DelegateAllowBlank:
+  Description: 'Do not use allow_blank as an option to delegate.'
+  Enabled: false
+
+Rails/Exit:
+  Description:
+    - 'Favor `fail`, `break`, `return`, etc. over `exit` in application or library code outside of Rake files to avoid exits during unit testing or running in production.'
+  Enabled: false
+
+Rails/FilePath:
+  Description: 'Use `Rails.root.join` for file path joining.'
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Description: 'Use keyword arguments instead of positional arguments in http method calls.'
+  Enabled: false
+  Include:
+    - 'spec/**/*'
+    - 'test/**/*'
+
+Rails/NotNullColumn:
+  Description: 'Do not add a NOT NULL column without a default value'
+  Enabled: false
+
+Rails/Output:
+  Description: 'Checks for calls to puts, print, etc.'
+  Enabled: false
+
+Rails/Present:
+  Description: 'Enforce using `blank?` and `present?`.'
+  Enabled: false
+  NotNilAndNotEmpty: true # Convert checks for not `nil` and not `empty?` to `present?`
+  NotBlank: true # Convert usages of not `blank?` to `present?`
+  UnlessBlank: true # Convert usages of `unless` `blank?` to `if` `present?`
+
+Rails/ReadWriteAttribute:
+  Description: 'Checks for read_attribute(:attr) and write_attribute(:attr, val).'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#read-attribute'
+  Enabled: false
+
+Rails/RelativeDateConstant:
+  Description: 'Do not assign relative date to constants.'
+  Enabled: false
+
+Rails/RequestReferer:
+  Description: 'Use consistent syntax for request.referer.'
+  Enabled: false
+
+Rails/ReversibleMigration:
+  Description: 'Checks whether the change method of the migration file is reversible.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#reversible-migration'
+  Reference: 'http://api.rubyonrails.org/classes/ActiveRecord/Migration/CommandRecorder.html'
+  Enabled: false
+
+Rails/ScopeArgs:
+  Description: 'Checks the arguments of ActiveRecord scopes.'
+  Enabled: false
+
+Rails/TimeZone:
+  Description: 'Checks the correct usage of time zone aware methods.'
+  StyleGuide: 'https://github.com/bbatsov/rails-style-guide#time'
+  Reference: 'http://danilenko.org/2012/7/6/rails_timezones'
+  Enabled: false
+
+Rails/UniqBeforePluck:
+  Description: 'Prefer the use of uniq or distinct before pluck.'
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Description: 'Use methods that skips model validations with caution. See reference for more information.'
+  Reference: 'http://guides.rubyonrails.org/active_record_validations.html#skipping-validations'
+  Enabled: false
+
+Rails/Validation:
+  Description: 'Use validates :attribute, hash of validations.'
+  Enabled: false
