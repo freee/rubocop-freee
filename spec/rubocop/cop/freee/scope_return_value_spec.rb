@@ -43,16 +43,16 @@ describe RuboCop::Cop::Freee::ScopeReturnValue do
     SOURCE
   end
 
-  context 'good' do
+  context 'when good' do
     it do
-      inspect_source(cop, good_source)
+      inspect_source(good_source, cop)
       expect(cop.offenses).to be_empty
     end
   end
 
-  context 'bad' do
+  context 'when bad' do
     it do
-      inspect_source(cop, bad_source)
+      inspect_source(bad_source, cop)
       expect(cop.offenses.size).to eq(2)
       expect(cop.message).to eq('scopeでselfを返してはいけません...')
     end

@@ -12,19 +12,9 @@ module RuboCop
       class ScopeReturnValue < Cop
         MSG = 'scopeでselfを返してはいけません...'
 
-        def_node_matcher :scope_call, <<-SCOPE
-          (send nil :scope $...)
-        SCOPE
-
         def on_send(node)
           return unless scope_node?(node)
-
-          scope_call(node) do |args|
-            n = args.find(&:lambda_or_proc?)
-            return unless n
-
-            add_offense(node, :expression, MSG) unless check_scope_node(n)
-          end
+          add_offense(node, message: MSG) unless check_scope_node(node)
         end
 
         private
