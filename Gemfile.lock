@@ -5,7 +5,7 @@ PATH
       mry
       rubocop (~> 0.57)
       rubocop-checkstyle_formatter
-      rubocop-rspec
+      rubocop-rspec (~> 1.25)
 
 GEM
   remote: https://rubygems.org/
@@ -30,19 +30,19 @@ GEM
       pry (~> 0.10)
     rainbow (3.0.0)
     rake (10.5.0)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.1)
-      rspec-support (~> 3.7.0)
-    rspec-expectations (3.7.0)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-mocks (3.7.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-support (3.7.1)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.58.2)
@@ -55,8 +55,8 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     rubocop-checkstyle_formatter (0.4.0)
       rubocop (>= 0.35.1)
-    rubocop-rspec (1.27.0)
-      rubocop (>= 0.56.0)
+    rubocop-rspec (1.28.0)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     unicode-display_width (1.4.0)
     yard (0.9.14)
@@ -69,7 +69,7 @@ DEPENDENCIES
   pry
   pry-byebug
   rake (~> 10.0)
-  rspec (~> 3.6)
+  rspec (~> 3.8)
   rspec_junit_formatter
   rubocop-freee!
   yard
