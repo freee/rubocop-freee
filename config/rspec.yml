@@ -1,32 +1,31 @@
 require: rubocop-rspec
 
+# Checks for create_list usage.
+FactoryBot/CreateList:
+  Enabled: false
+
 # Check that instances are not being stubbed globally.
 RSpec/AnyInstance:
   Enabled: false
-
-# Check for expectations where `be(...)` can replace `eql(...)`.
-RSpec/BeEql:
-  Enabled: true
 
 # We don't enforce this as we use this technique in a few places.
 RSpec/BeforeAfterAll:
   Enabled: false
 
-# Check that the first argument to the top level describe is the tested class or
-# module.
-RSpec/DescribeClass:
-  Enabled: true
-
-# Checks that the second argument to `describe` specifies a method.
-RSpec/DescribeMethod:
+# Checks `context` block descriptions should start with 'when', or 'with'.
+RSpec/ContextWording:
   Enabled: false
 
-# Avoid describing symbols.
-RSpec/DescribeSymbol:
+# Check that the first argument to the top level describe is the tested class or module.
+RSpec/DescribeClass:
   Enabled: true
 
 # Checks that tests use `described_class`.
 RSpec/DescribedClass:
+  Enabled: false
+
+# Checks that the second argument to `describe` specifies a method.
+RSpec/DescribeMethod:
   Enabled: false
 
 # Checks if an example group does not include any tests.
@@ -47,26 +46,22 @@ RSpec/ExampleWording:
     not: does not
   IgnoredWords: []
 
+# Chercks for do not use `expect` in hooks such as `before`.
+RSpec/ExpectInHook:
+  Enabled: false
+
 # Allows empty line after let for `before` setup and tiny examples.
 RSpec/EmptyLineAfterFinalLet:
   Enabled: false
 
-# Checks for `expect(...)` calls containing literal values.
-RSpec/ExpectActual:
-  Enabled: true
-
-# Checks for opportunities to use `expect { … }.to output`.
-RSpec/ExpectOutput:
-  Enabled: true
+# Checks for consistent style of change matcher.
+RSpec/ExpectChange:
+  Enabled: false
 
 # Checks the file and folder naming of the spec file.
 RSpec/FilePath:
   Enabled: false
   IgnoreMethods: true
-
-# Checks if there are focused specs.
-RSpec/Focus:
-  Enabled: true
 
 # Checks the arguments passed to `before`, `around`, and `after`.
 RSpec/HookArgument:
@@ -81,6 +76,10 @@ RSpec/ImplicitExpect:
 
 # Checks for the usage of instance variables.
 RSpec/InstanceVariable:
+  Enabled: false
+
+# Checks that `all` matcher is used instead of iterating over an array.
+RSpec/IteratedExpectation:
   Enabled: false
 
 # Checks for `subject` definitions that come after `let` definitions.
@@ -128,9 +127,12 @@ RSpec/RepeatedDescription:
 RSpec/RepeatedExample:
   Enabled: false
 
+RSpec/ReturnFromStub:
+  Enabled: false
+
 # Checks for stubbed test subjects.
 RSpec/SubjectStub:
-  Enabled: true
+  Enabled: false
 
 # Prefer using verifying doubles over normal doubles.
 RSpec/VerifiedDoubles:
@@ -139,9 +141,3 @@ RSpec/VerifiedDoubles:
 # Checks for setup scattered across multiple hooks in an example group.
 RSpec/ScatteredSetup:
   Enabled: true
-
-Metrics/BlockLength:
-  Exclude:
-    - Gemfile
-    - spec/**/*
-    - lib/tasks/**/*
