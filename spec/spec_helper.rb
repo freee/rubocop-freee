@@ -1,13 +1,8 @@
 # frozen_string_literal: true
 
-# Load library
-$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'rubocop_freee'
 require 'rubocop/rspec/support'
 require 'pry'
-
-rubocop_path = File.join(File.dirname(__FILE__), '../vendor/rubocop')
-Dir["#{rubocop_path}/spec/support/**/*.rb"].each {|f| require f }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

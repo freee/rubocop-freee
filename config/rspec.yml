@@ -58,11 +58,6 @@ RSpec/EmptyLineAfterFinalLet:
 RSpec/ExpectChange:
   Enabled: false
 
-# Checks the file and folder naming of the spec file.
-RSpec/FilePath:
-  Enabled: false
-  IgnoreMethods: true
-
 # Checks the arguments passed to `before`, `around`, and `after`.
 RSpec/HookArgument:
   Enabled: true

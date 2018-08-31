@@ -137,3 +137,9 @@ Rails/SkipsModelValidations:
 Rails/Validation:
   Description: 'Use validates :attribute, hash of validations.'
   Enabled: false
+
+# Checks the file and folder naming of the spec file.
+RSpec/FilePath:
+  Enabled: false
+  IgnoreMethods: true
+
