@@ -1,8 +1,9 @@
 # NOTE: rails.yml は repository毎に設定する
 inherit_from:
-  - .rubocop_todo.yml
-  - config/enabled.yml
-  - config/disabled.yml
+  - ./.rubocop_todo.yml
+  - ./config/default.yml
+  - ./config/enabled.yml
+  - ./config/disabled.yml
 
 # Common configuration.
 AllCops:

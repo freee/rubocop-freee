@@ -3,4 +3,3 @@
 Freee/ScopeReturnValue:
   Description: 'Check if an scope returns self.'
   Enabled: true
-

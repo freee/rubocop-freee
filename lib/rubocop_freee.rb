@@ -1,13 +1,6 @@
 # frozen_string_literal: true
 
-require 'pathname'
-require 'yaml'
-
 require 'rubocop'
-require 'rubocop/freee/version'
-require 'rubocop/freee/inject'
-
-RuboCop::Freee::Inject.defaults!
-
+require_relative 'rubocop/freee/version'
 # custom cops
-require 'rubocop/cop/scope_return_value'
+require_relative 'rubocop/cop/freee_cops'
