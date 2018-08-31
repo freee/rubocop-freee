@@ -348,6 +348,7 @@ Layout/MultilineMethodDefinitionBraceLayout:
     a new line.
   EnforcedStyle: symmetrical
   Enabled: true
+
 #################### Naming ###############################
 
 Naming/AsciiIdentifiers:
