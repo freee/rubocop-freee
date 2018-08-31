@@ -1,3 +1,11 @@
+# NOTE: rails.yml は repository毎に設定する
 inherit_from:
   - .rubocop_todo.yml
-  - ./config/default.yml
+  - config/exclude.yml
+  - config/enabled.yml
+  - config/disabled.yml
+
+# Common configuration.
+AllCops:
+  TargetRubyVersion: 2.3
+  DefaultFormatter: progress
