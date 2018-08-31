@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.licenses      = ['MIT']
 
   spec.add_dependency 'mry'
-  spec.add_dependency 'rubocop', '~> 0.57'
+  spec.add_dependency 'rubocop', '~> 0.57.2'
   spec.add_dependency 'rubocop-rspec', '~> 1.25'
   spec.add_dependency 'rubocop-checkstyle_formatter'
 
