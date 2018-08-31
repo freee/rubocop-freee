@@ -4,8 +4,10 @@ require 'pathname'
 require 'yaml'
 
 require 'rubocop'
-require 'rubocop_freee'
 require 'rubocop/freee/version'
+require 'rubocop/freee/inject'
+
+RuboCop::Freee::Inject.defaults!
 
 # custom cops
 require 'rubocop/cop/scope_return_value'
