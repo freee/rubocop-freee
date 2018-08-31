@@ -936,6 +936,9 @@ Style/MultilineOperationIndentation:
   IndentationWidth: 2
   Enabled: true
 
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
 ##################### Lint ################################
 
 # true: ブロック（イテレータ処理等）の未使用変数を許可しない false: 許可する
@@ -1193,11 +1196,6 @@ Metrics/ParameterLists:
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting'
   StyleGuide: '#three-is-the-number-thou-shalt-count'
-  Enabled: true
-
-Metrics/MethodLength:
-  Description: 'Avoid methods longer than 10 lines of code.'
-  StyleGuide: '#short-methods'
   Enabled: true
 
 Metrics/BlockLength:

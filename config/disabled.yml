@@ -2,6 +2,9 @@
 
 #################### Style ################################
 
+Style/FormatStringToken:
+  Enabled: false
+
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: '#english-comments'
@@ -163,6 +166,19 @@ Lint/UnneededDisable:
                  It must be explicitly disabled.
   Enabled: false
 
+Lint/UriEscapeUnescape:
+  Description: >-
+    `URI.escape` method is obsolete and should not be used. Instead, use
+    `CGI.escape`, `URI.encode_www_form` or `URI.encode_www_form_component`
+    depending on your specific use case.
+    Also `URI.unescape` method is obsolete and should not be used. Instead, use
+    `CGI.unescape`, `URI.decode_www_form` or `URI.decode_www_form_component`
+    depending on your specific use case.
+  Enabled: false
+
+Lint/SplatKeywordArguments:
+  Enabled: false
+
 # TODO custom cop作成が必要
 Lint/EndAlignment:
   Description: 'Align ends correctly.'
@@ -176,6 +192,24 @@ Metrics/ClassLength:
 
 Metrics/ModuleLength:
   Description: 'Avoid modules longer than 100 lines of code.'
+  Enabled: false
+
+Metrics/BlockLength:
+  Description: 'Avoid long blocks with many lines.'
+  Enabled: false
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 10 lines of code.'
+  StyleGuide: '#short-methods'
+  Enabled: false
+
+#################### Layout ##############################
+
+Layout/SpaceInsideBlockBraces:
+  Description: >-
+    Checks that block braces have or don't have surrounding space.
+    For blocks taking parameters, checks that the left brace has
+    or doesn't have trailing space.
   Enabled: false
 
 #################### Security #############################
@@ -199,3 +233,17 @@ Bundler/OrderedGems:
   Include:
     - '**/Gemfile'
     - '**/gems.rb'
+
+#################### Performance ##############################
+
+Performance/InefficientHashSearch:
+  Description: 'Use `key?` or `value?` instead of `keys.include?` or `values.include?`'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#hashkey-instead-of-hashkeysinclude-code'
+  Enabled: false
+
+Performance/UnneededSort:
+  Description: >-
+    Use `min` instead of `sort.first`,
+    `max_by` instead of `sort_by...last`, etc.
+  Enabled: false
+
